@@ -4,44 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Reece | Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="hero">
             <h1>Thomas Reece</h1>
-            <p>Software Engineer</p>
-        </header>
-
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+            <p></p>
+            <a href="#about">About Me</a>
+        </div>
 
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am currently a DevOps engineering intern at Lloyds banking group, and a computer science student at
-                Newcastle University. I love to solve problems and work on projects, as well as learning about
-                new cutting edge technology.
+                I am currently a DevOps engineering intern at Lloyds Banking Group and a computer science student at
+                Newcastle University. Passionate about solving problems, building innovative solutions, and learning
+                cutting-edge technology.
             </p>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>DevOps Engineer</h3>
-                <p><strong>Lloyds Banking Group</strong> | June 2024 - Present</p>
-                <p>Developed CI/CD pipelines, shell scripts for automation, and a mainframe based arcade to showcase modern capabilities</p>
-            </div>
-            <div class="experience-item">
-                <h3>Data Administrator</h3>
-                <p><strong>Pickwatch</strong>September 2023 - </p>
-                <p>Assisted in managing data in a timely manner relating to sports fixtures each weekend</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>DevOps Engineer</h3>
+                    <p>Lloyds Banking Group | June 2024 - Present<br>Developed CI/CD pipelines and a mainframe arcade project.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Data Administrator</h3>
+                    <p>Pickwatch | September 2023 - Present<br>Managed sports-related data on weekends.</p>
+                </div>
             </div>
         </section>
 
@@ -59,12 +52,13 @@
             </div>
         </section>
 
-        <footer id="contact">
+        <footer>
             <h2>Contact</h2>
             <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/john-doe" target="_blank">/john-doe</a></p>
-            <p>GitHub: <a href="https://github.com/johndoe" target="_blank">johndoe</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/john-doe">/john-doe</a></p>
+            <p>GitHub: <a href="https://github.com/johndoe">johndoe</a></p>
         </footer>
     </div>
 </body>
 </html>
+
