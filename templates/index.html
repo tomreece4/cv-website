@@ -13,6 +13,7 @@
             <h1>Thomas Reece</h1>
             <p></p>
             <a href="#about">About Me</a>
+            <button id="dark-mode-toggle" class="dark-mode-btn">🌙</button>
         </div>
 
         <section id="about">
@@ -160,6 +161,32 @@
     });
 
     </script>
+
+    <script>
+        // Get the dark mode toggle button
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        // Check if dark mode is already saved in localStorage
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.textContent = '🌞';  // Change button to sun icon
+        }
+
+        // Add click event listener to toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            // Save the preference in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                darkModeToggle.textContent = '🌞';  // Change button to sun icon
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                darkModeToggle.textContent = '🌙';  // Change button to moon icon
+            }
+        });
+    </script>
+
 </body>
 </html>
 
