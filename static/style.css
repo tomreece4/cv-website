@@ -3,81 +3,119 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #1a1a2e; /* Sleek dark background */
-    color: #f5f5f5;
+    background: #f5f7fa; /* Light soft gray */
+    color: #374151;       /* Dark gray text for readability */
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
 a {
-    color: #ff4c60;
+    color: #3b82f6; /* Soft blue */
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
 a:hover {
-    color: #ffe227;
-    text-shadow: 0 0 8px #ffe227;
+    color: #2563eb; /* Slightly deeper blue */
+    text-shadow: none;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #ff4c60, #ff9068);
+    background: linear-gradient(180deg, #e0e7ff 0%, #c7d2fe 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #ffffff;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    color: #1e293b;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent 70%);
+    z-index: 0;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 3.5rem;
+    font-weight: 700;
     text-transform: uppercase;
     margin: 0;
-    animation: fadeIn 2s ease-in-out;
+    letter-spacing: 1px;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 1;
+    color: #1e293b;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-top: 15px;
-    font-style: italic;
-    animation: fadeIn 3s ease-in-out;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-style: normal;
+    opacity: 0.9;
+    animation: fadeIn 2.5s ease-in-out;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+    color: #334155;
 }
 
 .hero a {
-    margin-top: 30px;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ff4c60;
-    background-color: #ffffff;
-    border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: bounce 2s infinite alternate;
+    margin-top: 2rem;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: #3b82f6;
+    border-radius: 9999px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+    animation: fadeInUp 1.8s ease-in-out;
+    position: relative;
+    z-index: 1;
 }
 
 .hero a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    background-color: #2563eb;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* About Section */
 #about {
-    padding: 80px 20px;
+    padding: 6rem 5%;
     text-align: center;
-    background: #f5f5f5;
-    color: #1a1a2e;
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    background: #fff;
+    color: #374151;
 }
 
 #about h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #ff4c60;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937; /* Dark navy - professional */
+    font-weight: 700;
     position: relative;
     display: inline-block;
 }
@@ -85,54 +123,72 @@ a:hover {
 #about h2::after {
     content: '';
     position: absolute;
-    width: 50%;
-    height: 3px;
-    background: #ff4c60;
-    bottom: -8px;
-    left: 25%;
+    width: 60%;
+    height: 0.2rem;
+    background: #374151; /* Darker, subtle underline */
+    bottom: -0.75rem;
+    left: 20%;
+    border-radius: 2px;
 }
 
 #about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 15px;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 80%;
+    margin: 1.25rem auto 0;
+    color: #4b5563;
 }
 
 /* Experience Section */
 #experience {
-    padding: 100px 20px;
-    background: #1a1a2e;
+    padding: 6rem 5%;
+    background: #f9fafb;
+    color: #374151;
 }
 
 #experience h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #ffe227;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937; /* Dark navy */
     text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+#experience h2::after {
+    content: '';
+    position: absolute;
+    width: 3.5rem;
+    height: 0.2rem;
+    background: #374151; /* Darker underline */
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 .timeline {
     position: relative;
     margin: 0 auto;
-    padding: 20px 0;
-    max-width: 800px;
+    padding: 2rem 0;
+    max-width: 90%;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 0.15rem;
     height: 100%;
-    background: #ffe227;
+    background: #3b82f6; /* Keep subtle blue for timeline line */
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0.6;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
+    padding: 0 2%;
 }
 
 .timeline-item:nth-child(odd) {
@@ -145,108 +201,115 @@ a:hover {
 
 .timeline-item h3 {
     font-size: 1.5rem;
-    color: #ff4c60;
-    margin-bottom: 10px;
+    color: #1f2937; /* Dark navy */
+    margin-bottom: 0.75rem;
+    font-weight: 600;
 }
 
 .timeline-item p {
-    background: #2d2d44;
-    padding: 15px;
-    border-radius: 10px;
-    color: #f5f5f5;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #e0e7ff;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    color: #1e293b;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    max-width: 75%;
 }
 
 /* Skills Section */
 #skills {
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #2d2d44, #1a1a2e);
+    padding: 6rem 5%;
+    background: #eef2ff;
 }
 
 #skills h2 {
-    font-size: 3rem;
-    color: #ffe227;
+    font-size: 2.5rem;
+    color: #1f2937; /* Dark navy */
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
+    font-weight: 700;
 }
 
 .skills-grid {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 .skills-grid span {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ffffff;
-    padding: 20px;
-    background: linear-gradient(135deg, #ff4c60, #ff9068);
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    padding: 1rem 1.5rem;
+    background: #dbeafe;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1rem rgba(59, 130, 246, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-grid span:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 1.25rem rgba(59, 130, 246, 0.25);
 }
 
 /* Projects Section */
 #projects {
-    padding: 100px 20px;
-    background: #1a1a2e;
+    padding: 6rem 5%;
+    background: #f9fafb;
 }
 
 #projects h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
-    color: #ffe227;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1f2937; /* Dark navy */
     text-align: center;
+    font-weight: 700;
 }
 
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
     justify-content: center;
 }
 
 .card {
-    flex: 0 0 calc(33.333% - 20px); /* 3 cards per row with 20px gap */
-    max-width: calc(33.333% - 20px);
-    background: #42c2f5;
-    border-radius: 8px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    background: #e0e7ff;
+    border-radius: 0.75rem;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 1rem rgba(59, 130, 246, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 260px;
 }
 
 .card img {
     width: 100%;
-    border-bottom: 2px solid #fff;
+    border-bottom: 0.15rem solid #93c5fd;
 }
 
 .card .container {
-    padding: 15px;
+    padding: 1.25rem;
     text-align: center;
 }
 
 .card h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #1a1a2e;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #1e293b;
+    font-weight: 600;
 }
 
 .card p {
     font-size: 1rem;
-    color: #1a1a2e;
+    color: #4b5563;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(59, 130, 246, 0.25);
 }
 
 /* Modal Styles */
@@ -259,56 +322,56 @@ a:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 8px;
-    width: 80%;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    width: 90%;
     max-width: 600px;
     text-align: center;
-    color: #1a1a2e;
+    color: #374151;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
 .close {
-    color: #aaa;
+    color: #6b7280;
     float: right;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close:hover,
 .close:focus {
-    color: #000;
-    text-decoration: none;
+    color: #1e293b;
 }
 
 #modal-link {
-    margin-top: 20px;
+    margin-top: 1.5rem;
     display: inline-block;
-    padding: 10px 20px;
-    background: #42c2f5;
-    color: white;
+    padding: 0.75rem 1.5rem;
+    background: #3b82f6;
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s ease;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
 }
 
 #modal-link:hover {
-    background: #1a73e8;
+    background: #2563eb;
 }
 
 /* Footer */
 footer {
-    padding: 50px 20px;
-    background: #1a1a2e;
+    padding: 3rem 5%;
+    background: #e0e7ff;
     text-align: center;
-    color: #f5f5f5;
+    color: #1e293b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,225 +379,21 @@ footer {
 }
 
 footer h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #ffe227;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+    color: #1f2937; /* Dark navy */
+    font-weight: 700;
 }
 
 footer a {
-    font-weight: bold;
+    font-weight: 600;
+    color: #1e293b;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #ff4c60;
-}
-
-/* Default Light Mode Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #1a1a2e; /* Sleek dark background */
-    color: #f5f5f5;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background: #121212; /* Darker background */
-    color: #e0e0e0; /* Light text for dark mode */
-}
-
-/* Hero Section in Dark Mode */
-body.dark-mode .hero {
-    background: linear-gradient(135deg, #4c2b6b, #1d0a3d); /* Darker and more dramatic colors */
-    color: #f5f5f5; /* Light text color */
-}
-
-body.dark-mode .hero h1 {
-    color: #ff61a6; /* Soft pinkish hue for headings */
-}
-
-body.dark-mode .hero p {
-    color: #a1a1a1; /* Lighter text for the subtitle */
-}
-
-body.dark-mode .hero a {
-    background-color: #2e0a39; /* Dark button with a pop of color */
-    color: #ff61a6; /* Light text on dark buttons */
-    border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark-mode .hero a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
-}
-
-/* About Section in Dark Mode */
-body.dark-mode #about {
-    background: #1f1f1f; /* Dark background for the about section */
-    color: #e0e0e0;
-}
-
-body.dark-mode #about h2 {
-    color: #ff61a6; /* Pinkish hue for headings */
-}
-
-body.dark-mode #about p {
-    color: #bbb; /* Slightly muted text for better readability */
-}
-
-/* Experience Section in Dark Mode */
-body.dark-mode #experience {
-    background: #1d1d1d; /* Darker background */
-    color: #f5f5f5;
-}
-
-body.dark-mode .timeline::before {
-    background: #ff61a6; /* Lighter accent line for the timeline */
-}
-
-body.dark-mode .timeline-item p {
-    background: #333; /* Darker background for the timeline item */
-    color: #ddd; /* Lighter text in the timeline */
-}
-
-/* Skills Section in Dark Mode */
-body.dark-mode #skills {
-    background: #212121; /* Darker background for skills section */
-}
-
-body.dark-mode #skills h2 {
-    color: #ff61a6; /* Consistent soft accent color */
-}
-
-/* Skills grid in Dark Mode */
-body.dark-mode .skills-grid span {
-    background: linear-gradient(135deg, #ff61a6, #4e288b); /* Vibrant gradient */
-    color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-body.dark-mode .skills-grid span:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-/* Projects Section in Dark Mode */
-body.dark-mode #projects {
-    background: #121212; /* Darker background */
-}
-
-body.dark-mode #projects h2 {
-    color: #ff61a6; /* Accent color for project titles */
-}
-
-body.dark-mode .card {
-    background: #2c2c2c; /* Darker cards with muted accents */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark-mode .card img {
-    border-bottom: 2px solid #333; /* Subtle border under images */
-}
-
-body.dark-mode .card h4 {
-    color: #ff61a6; /* Accent color for card titles */
-}
-
-body.dark-mode .card p {
-    color: #bbb; /* Lighter text for project description */
-}
-
-body.dark-mode .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-}
-
-/* Footer in Dark Mode */
-body.dark-mode footer {
-    background: #1d1d1d; /* Dark footer background */
-    color: #bbb; /* Muted footer text color */
-}
-
-body.dark-mode footer a {
-    color: #ff61a6; /* Accent color for links */
-}
-
-body.dark-mode footer a:hover {
-    color: #ffe227; /* Hover color for links */
-}
-
-/* Modal Styles in Dark Mode */
-body.dark-mode .modal-content {
-    background-color: #2b2b2b; /* Darker modal background */
-    color: #f5f5f5; /* Light text in modal */
-}
-
-body.dark-mode .close {
-    color: #bbb; /* Lighter close button */
-}
-
-body.dark-mode .close:hover {
-    color: #fff; /* Close button turns white when hovered */
-}
-
-/* Button in Dark Mode */
-body.dark-mode #dark-mode-toggle {
-    background: #ff61a6; /* Bright accent button for toggle */
-    color: #fff;
-}
-
-
-/* Dark Mode Button Styles */
-#dark-mode-toggle {
-    padding: 10px 20px;
-    background: #ff4c60;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
-}
-
-#dark-mode-toggle:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-#dark-mode-toggle:focus {
-    outline: none;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes bounce {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-10px);
-    }
+    color: #2563eb;
 }
 
 /* Responsive Design */
