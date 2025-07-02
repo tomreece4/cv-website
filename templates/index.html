@@ -30,7 +30,7 @@
                 <div class="timeline-item">
                     <h3>Research Software Engineer</h3>
                     <p>N8 CIR | June 2025 - August 2025
-                        <br>- Built a HDCondor cluster from unused university computers, facilitating deep learning runs for research
+                        <br>-  unused university computers, facilitating deep learning runs for research
                         <br>- Saved countless resources and money by making use of existing unused infrastructure, rather than running on the cloud or buying new hardware.
                     </p>
                 </div>
@@ -119,14 +119,14 @@
             </div>
 
             <div id="projectModal" class="modal">
-                <div class="modal-content">
+                <div class="modal-content scrollable-modal">
                     <span class="close">&times;</span>
-                    <h3 id="modal-title">Project Title</h3>
-                    <img id="modal-image" src="" alt="Project Image" style="width:100%">
-                    <p id="modal-description">Project Description</p>
-                    <a id="modal-link" href="#" target="_blank">View Project</a>
+                    <div id="modal-body">
+                        <!-- Dynamic full project content will be injected here -->
+                    </div>
                 </div>
             </div>
+
 
         </section>
 
@@ -140,38 +140,95 @@
         </footer>
     </div>
 
-    <script>
-    const modal = document.getElementById("projectModal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalImage = document.getElementById("modal-image");
-    const modalDescription = document.getElementById("modal-description");
-    const modalLink = document.getElementById("modal-link");
-    const closeButton = document.querySelector(".close");
+<script>
+const modal = document.getElementById("projectModal");
+const modalBody = document.getElementById("modal-body");
+const closeButton = document.querySelector(".close");
 
-    const projectCards = document.querySelectorAll(".card");
+const projectCards = document.querySelectorAll(".card");
 
-    projectCards.forEach((card, index) => {
-        card.addEventListener("click", () => {
-            // Populate modal with data (replace these with actual project data)
-            modalTitle.textContent = `Project ${index + 1}`;
-            modalImage.src = "img_avatar.png"; // Update with your project image
-            modalDescription.textContent = "Detailed project description goes here.";
-            modalLink.href = "#"; // Update with project link
-            modal.style.display = "block";
-        });
+// Each project’s full content goes here
+const projectDetails = [
+    {
+        content: `
+            <h3>Machine Learning - Simulating Evolutionary Techniques to Create Images</h3>
+            <p>This project involved creating simulations of real life evolutionary techniques, such as mutation, to find the fastest way to recreate artwork with limited shapes.</p>
+            <img src="img_avatar.png" alt="Project Image">
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
+            <p>Technologies used: Python, NumPy, PIL</p>
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
+            <p>Technologies used: Python, NumPy, PIL</p>
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
+            <p>Technologies used: Python, NumPy, PIL</p>
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
+            <p>Technologies used: Python, NumPy, PIL</p>
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
+            <p>Technologies used: Python, NumPy, PIL</p>
+        `
+    },
+    {
+        content: `
+            <h3>Group Project - Cupboardy: A cupboard management application</h3>
+            <p>I led a group of 6 other students, creating an application that allows for convenient tracking of food items and their expiration dates, making use of barcode scanning and Google Maps API to track local food banks.</p>
+            <img src="img_avatar.png" alt="Cupboardy Screenshot">
+            <p>We implemented Firebase authentication, real-time database updates, and responsive design principles. I was responsible for the API integration and front-end layout.</p>
+        `
+    },
+    {
+        content: `
+            <h3>Client-Server communication simulation</h3>
+            <p>A university project simulating data packets being sent between a client and server computer. I received a grade of 94%.</p>
+            <img src="img_avatar.png" alt="Network Simulation">
+            <p>The simulation visualizes network layers, packet fragmentation, and error correction. It helped demonstrate how protocols like TCP and UDP work under the hood.</p>
+        `
+    },
+    {
+        content: `
+            <h3>Lottery web app</h3>
+            <p>A lottery web app focused on implementing cybersecurity techniques and encryption. I achieved 95% for this project.</p>
+            <img src="img_avatar.png" alt="Lottery App">
+            <p>The app uses password hashing (bcrypt), encryption for ticket data, and JWT tokens for session management. It's built with a Node.js backend and React frontend.</p>
+        `
+    },
+    {
+        content: `
+            <h3>Project 5</h3>
+            <p>Short description of the project.</p>
+            <img src="img_avatar.png" alt="Project 5 Image">
+        `
+    },
+    {
+        content: `
+            <h3>Project 6</h3>
+            <p>Short description of the project.</p>
+            <img src="img_avatar.png" alt="Project 6 Image">
+        `
+    }
+];
+
+// Hook up each card to show its content
+projectCards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+        modalBody.innerHTML = projectDetails[index].content;
+        modal.style.display = "block";
+        document.body.classList.add("modal-open"); // prevent background scroll
     });
+});
 
-    closeButton.addEventListener("click", () => {
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open"); // re-enable scroll
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
         modal.style.display = "none";
-    });
+        document.body.classList.remove("modal-open"); // re-enable scroll
+    }
+});
 
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+</script>
 
-    </script>
 
 
 </body>
