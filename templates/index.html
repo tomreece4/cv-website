@@ -13,15 +13,14 @@
             <h1>Thomas Reece</h1>
             <p></p>
             <a href="#about">About Me</a>
-            <button id="dark-mode-toggle" class="dark-mode-btn">🌙</button>
         </div>
 
         <section id="about">
             <h2>About Me</h2>
             <p>
-                I am currently a DevOps engineering intern at Lloyds Banking Group and a computer science student at
-                Newcastle University. Passionate about solving problems, building innovative solutions, and learning
-                cutting-edge technology.
+                I am currently a Research Software Engineering Intern at N8 CIR, specialising in Machine Learning,
+                and a computer science student at Newcastle University. Passionate about solving problems,
+                building innovative solutions, and learning cutting-edge technology.
             </p>
         </section>
 
@@ -31,7 +30,7 @@
                 <div class="timeline-item">
                     <h3>Research Software Engineer</h3>
                     <p>N8 CIR | June 2025 - August 2025
-                        <br>- Used the HTCondor Toolkit and scripting to make use of unused university computers, facilitating deep learning runs for research
+                        <br>- Built a HDCondor cluster from unused university computers, facilitating deep learning runs for research
                         <br>- Saved countless resources and money by making use of existing unused infrastructure, rather than running on the cloud or buying new hardware.
                     </p>
                 </div>
@@ -44,7 +43,7 @@
                 </div>
                 <div class="timeline-item">
                     <h3>Data Administrator</h3>
-                    <p>Pickwatch | September 2023 - Present
+                    <p>Pickwatch | September 2023 - June 2024
                         <br>- Managed real-time sports data, ensuring perfect accuracy and up-to-date information regarding fixtures.
                         <br>- Worked completely remotely, improving my time management skills and communication using Slack.
                         <br>- Gained extensive experience in using Excel to manage data.
@@ -90,15 +89,17 @@
                 <div class="card">
                     <img src="img_avatar.png" alt="Project 3" style="width:100%">
                     <div class="container">
-                        <h4><b>Project 3</b></h4>
-                        <p>Short description of the project.</p>
+                        <h4><b>Client-Server communication simulation</b></h4>
+                        <p>A university project simulating data packets being sent between a client and server computer.
+                            I received a grade of 94%</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="img_avatar.png" alt="Project 4" style="width:100%">
                     <div class="container">
-                        <h4><b>Project 4</b></h4>
-                        <p>Short description of the project.</p>
+                        <h4><b>Lottery web app</b></h4>
+                        <p>A lottery web app focused on implementing cybersecurity techniques and encryption.
+                        I achieved 95% for this project.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -172,30 +173,6 @@
 
     </script>
 
-    <script>
-        // Get the dark mode toggle button
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-        // Check if dark mode is already saved in localStorage
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            darkModeToggle.textContent = '🌞';  // Change button to sun icon
-        }
-
-        // Add click event listener to toggle dark mode
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-
-            // Save the preference in localStorage
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-                darkModeToggle.textContent = '🌞';  // Change button to sun icon
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-                darkModeToggle.textContent = '🌙';  // Change button to moon icon
-            }
-        });
-    </script>
 
 </body>
 </html>
