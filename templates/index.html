@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+
     <div class="container">
         <div class="hero">
             <h1>Thomas Reece</h1>
@@ -70,12 +71,12 @@
             <h2>My Projects</h2>
             <div class="projects-grid">
                 <div class="card">
-                    <img src="img_avatar.png" alt="Project 1" style="width:100%">
                     <div class="container">
                         <h4><b>Machine Learning - Simulating Evolutionary Techniques to Create Images</b></h4>
                         <p>This project involved creating simulations of real life evolutionary techniques, such
                         as mutation, to find the fastest way to recreate artwork with limited shapes.</p>
                     </div>
+                    <img src="static/images/projects/evo_project/side_by_sides.png" alt="Project 1" style="width:100%">
                 </div>
                 <div class="card">
                     <img src="img_avatar.png" alt="Project 2" style="width:100%">
@@ -151,19 +152,23 @@ const projectCards = document.querySelectorAll(".card");
 const projectDetails = [
     {
         content: `
-            <h3>Machine Learning - Simulating Evolutionary Techniques to Create Images</h3>
-            <p>This project involved creating simulations of real life evolutionary techniques, such as mutation, to find the fastest way to recreate artwork with limited shapes.</p>
-            <img src="img_avatar.png" alt="Project Image">
-            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
-            <p>Technologies used: Python, NumPy, PIL</p>
-            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
-            <p>Technologies used: Python, NumPy, PIL</p>
-            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
-            <p>Technologies used: Python, NumPy, PIL</p>
-            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
-            <p>Technologies used: Python, NumPy, PIL</p>
-            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions, evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input images using just a small set of geometric shapes.</p>
-            <p>Technologies used: Python, NumPy, PIL</p>
+            <h3>Machine Learning - Simulating Evolutionary Techniques to Recreate Images</h3>
+            <p>During this project, I used machine learning and evolutionary techniques to recreate three images to the
+            highest possible accuracy while using just 100 polygons. This project was a large success, as I achieved
+            accuracy of 96% in all of these recreations. This was the highest accuracy achieved in my entire
+            year group.</p>
+            <img src="/static/images/projects/evo_project/side_by_sides.png" alt="Project Image">
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions,
+            evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input
+            images using just a small set of geometric shapes.</p>
+            <p>I decided to create algorithms for three different evolutionary techniques in order to find the most
+            efficient one. The algorithms I created were for random mutation, tournament selection, and roulette
+            selection. I evaluated their speeds by constructing a graph using matplotlib</p>
+            <img src="/static/images/projects/evo_project/accuracy_comparisons.png" alt="Project Image">
+            <p>I used evolutionary techniques such as tournament selection, weighted roulette selection and colour
+            mutation, as well as changing initial parameters in order to optimise the final results. A progression of
+            accuracy based on these factors is shown below. </p>
+            <img src="/static/images/projects/evo_project/table_of_accuracy.png" alt="Project Image">
         `
     },
     {
@@ -226,6 +231,14 @@ window.addEventListener("click", (event) => {
         document.body.classList.remove("modal-open"); // re-enable scroll
     }
 });
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
 
 </script>
 
