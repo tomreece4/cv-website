@@ -48,16 +48,55 @@ a:hover {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0;
+    font-size: 3.75rem;
+    font-weight: 800;
     letter-spacing: 1px;
-    animation: fadeIn 1.5s ease-in-out;
+    margin: 0;
+    animation: fadeIn 1.2s ease-in-out;
     position: relative;
     z-index: 1;
     color: #1e293b;
 }
+
+.hero h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: #3b82f6;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.hero-tagline {
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+    font-weight: 600;
+    color: #3b82f6;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.highlight {
+    background-color: #e0e7ff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    color: #1e40af;
+    box-shadow: 0 0.25rem 0.75rem rgba(59, 130, 246, 0.2);
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #334155;
+    margin-top: 1rem;
+    max-width: 720px;
+    line-height: 1.8;
+    animation: fadeInUp 2.2s ease-in-out;
+}
+
 
 .hero p {
     font-size: 1.25rem;
@@ -70,6 +109,15 @@ a:hover {
     position: relative;
     z-index: 1;
 }
+
+.hero-subtext {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-top: 1rem;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
 
 .hero a {
     margin-top: 2rem;
