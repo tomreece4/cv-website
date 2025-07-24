@@ -95,13 +95,13 @@
                     <img src="static/images/projects/evo_project/side_by_sides.png" alt="Project 1" style="width:100%">
                 </div>
                 <div class="card">
-                    <img src="img_avatar.png" alt="Project 2" style="width:100%">
                     <div class="container">
-                        <h4><b>Group Project - Cupboardy: A cupboard management application</b></h4>
-                        <p>I led a group of 6 other students, creating an application that allows for
-                        convenient tracking of food items and their expiration dates, making use of barcode
-                        scanning and google maps API to track local food banks</p>
+                        <h4><b>Data Structures & Algorithms Simulator</b></h4>
+                        <p>A personal project I developed to improve my DSA skills, this project contains a GUI
+                        allowing you to select a search/sort/traversal algorithm and number of values, and visualises
+                        each step of this process</p>
                     </div>
+                    <img src="static/images/projects/DSA_project/bfs.png" alt="Project 2" style="width:100%">
                 </div>
                 <div class="card">
                     <img src="img_avatar.png" alt="Project 3" style="width:100%">
@@ -164,7 +164,6 @@ const closeButton = document.querySelector(".close");
 
 const projectCards = document.querySelectorAll(".card");
 
-// Each project’s full content goes here
 const projectDetails = [
     {
         content: `
@@ -189,10 +188,16 @@ const projectDetails = [
     },
     {
         content: `
-            <h3>Group Project - Cupboardy: A cupboard management application</h3>
-            <p>I led a group of 6 other students, creating an application that allows for convenient tracking of food items and their expiration dates, making use of barcode scanning and Google Maps API to track local food banks.</p>
-            <img src="img_avatar.png" alt="Cupboardy Screenshot">
-            <p>We implemented Firebase authentication, real-time database updates, and responsive design principles. I was responsible for the API integration and front-end layout.</p>
+            <h3>Data Structures & Algorithms Simulator</h3>
+            <p>This project was developed in my own time, as I looked to improve my programming skills when working
+            with various data structures and algorithms. The program visualises each node/value, and simulates
+            the process of working through to sort/search the values.</p>
+            <ul>
+                <li>Current values being checked are coloured red</li>
+                <li>All other values are coloured blue</li>
+                <li>Once completed, the entire sorted/searched set is displayed in green</li>
+            </ul>
+            <p>The user can choose sorting, searching, or traversal algorithms, and adjust parameters and speed of animation via the GUI.</p>
         `
     },
     {
@@ -226,6 +231,7 @@ const projectDetails = [
         `
     }
 ];
+
 
 // Hook up each card to show its content
 projectCards.forEach((card, index) => {
