@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Reece | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">Thomas Reece</a>
+        <nav class="nav-links">
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle">&#9776;</button>
+      </div>
+    </header>
+
+
+    <div class="container">
+        <div class="hero">
+          <h1>Thomas Reece</h1>
+          <p class="hero-subtext">
+            Research Software Engineering Intern @ N8 CIR
+          </p>
+          <p class="hero-description">
+            Computer Science student at Newcastle University, passionate about solving problems, building innovative software, and exploring machine learning & AI.
+          </p>
+        </div>
+
+         <!-- Add an image carousel of various projects, to then have my name/details on the left,
+         rotating images of projects on the right. Fills screen up more-->
+
+
+
+
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Research Software Engineer</h3>
+                    <p>N8 CIR | June 2025 - August 2025
+                        <br>-  unused university computers, facilitating deep learning runs for research
+                        <br>- Saved countless resources and money by making use of existing unused infrastructure, rather than running on the cloud or buying new hardware.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Software Engineer</h3>
+                    <p>Lloyds Banking Group | June 2024 - June 2025
+                        <br>- Developed CI/CD pipelines on Harness, including automating a database schema change process which decreased waiting times by 4000%.
+                        <br>- Presented a mainframe based project to over 1000 people at the Reboot hackathon event. Guests included microsoft colleagues and senior Lloyds colleagues.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Data Administrator</h3>
+                    <p>Pickwatch | September 2023 - June 2024
+                        <br>- Managed real-time sports data, ensuring perfect accuracy and up-to-date information regarding fixtures.
+                        <br>- Worked completely remotely, improving my time management skills and communication using Slack.
+                        <br>- Gained extensive experience in using Excel to manage data.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span>Python</span>
+                <span>Harness</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>SQL</span>
+                <span>HTML/CSS</span>
+                <span>Docker</span>
+                <span>Git/GitHub</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <div class="container">
+                        <h4><b>Machine Learning - Simulating Evolutionary Techniques to Create Images</b></h4>
+                        <p>This project involved creating simulations of real life evolutionary techniques, such
+                        as mutation, to find the fastest way to recreate artwork with limited shapes.</p>
+                    </div>
+                    <img src="static/images/projects/evo_project/side_by_sides.png" alt="Project 1" style="width:100%">
+                </div>
+                <div class="card">
+                    <div class="container">
+                        <h4><b>Data Structures & Algorithms Simulator</b></h4>
+                        <p>A personal project I developed to improve my DSA skills, this project contains a GUI
+                        allowing you to select a search/sort/traversal algorithm and number of values, and visualises
+                        each step of this process</p>
+                    </div>
+                    <img src="static/images/projects/DSA_project/bfs.png" alt="Project 2" style="width:100%">
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="Project 3" style="width:100%">
+                    <div class="container">
+                        <h4><b>Client-Server communication simulation</b></h4>
+                        <p>A university project simulating data packets being sent between a client and server computer.
+                            I received a grade of 94%</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="Project 4" style="width:100%">
+                    <div class="container">
+                        <h4><b>Lottery web app</b></h4>
+                        <p>A lottery web app focused on implementing cybersecurity techniques and encryption.
+                        I achieved 95% for this project.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="Project 5" style="width:100%">
+                    <div class="container">
+                        <h4><b>Project 5</b></h4>
+                        <p>Short description of the project.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img_avatar.png" alt="Project 6" style="width:100%">
+                    <div class="container">
+                        <h4><b>Project 6</b></h4>
+                        <p>Short description of the project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projectModal" class="modal">
+                <div class="modal-content scrollable-modal">
+                    <span class="close">&times;</span>
+                    <div id="modal-body">
+                        <!-- Dynamic full project content will be injected here -->
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+</div>
+
+        <footer>
+            <h2>Contact</h2>
+            <p><a href="mailto:thomas.reece4@outlook.com">Email</a></p>
+            <p><a href="https://www.linkedin.com/in/tom-reece-050ab21b3/">LinkedIn</a></p>
+            <p><a href="https://github.com/tomreece4">GitHub</a></p>
+        </footer>
+    </div>
+
+<script>
+const modal = document.getElementById("projectModal");
+const modalBody = document.getElementById("modal-body");
+const closeButton = document.querySelector(".close");
+
+const projectCards = document.querySelectorAll(".card");
+
+const projectDetails = [
+    {
+        content: `
+            <h3>Machine Learning - Simulating Evolutionary Techniques to Recreate Images</h3>
+            <p>During this project, I used machine learning and evolutionary techniques to recreate three images to the
+            highest possible accuracy while using just 100 polygons. This project was a large success, as I achieved
+            accuracy of 96% in all of these recreations. This was the highest accuracy achieved in my entire
+            year group.</p>
+            <img src="/static/images/projects/evo_project/side_by_sides.png" alt="Project Image">
+            <p>The algorithm mimics genetic evolution by iteratively mutating a population of candidate solutions,
+            evaluating their fitness, and breeding the most successful candidates. It learns how to recreate input
+            images using just a small set of geometric shapes.</p>
+            <p>I decided to create algorithms for three different evolutionary techniques in order to find the most
+            efficient one. The algorithms I created were for random mutation, tournament selection, and roulette
+            selection. I evaluated their speeds by constructing a graph using matplotlib</p>
+            <img src="/static/images/projects/evo_project/accuracy_comparisons.png" alt="Project Image">
+            <p>I used evolutionary techniques such as tournament selection, weighted roulette selection and colour
+            mutation, as well as changing initial parameters in order to optimise the final results. A progression of
+            accuracy based on these factors is shown below. </p>
+            <img src="/static/images/projects/evo_project/table_of_accuracy.png" alt="Project Image">
+        `
+    },
+    {
+        content: `
+            <h3>Data Structures & Algorithms Simulator</h3>
+            <p>This project was developed in my own time, as I looked to improve my programming skills when working
+            with various data structures and algorithms. The program visualises each node/value, and simulates
+            the process of working through to sort/search the values.</p>
+            <ul>
+                <li>Current values being checked are coloured red</li>
+                <li>All other values are coloured blue</li>
+                <li>Once completed, the entire sorted/searched set is displayed in green</li>
+            </ul>
+            <p>The user can choose sorting, searching, or traversal algorithms, and adjust parameters and speed of animation via the GUI.</p>
+        `
+    },
+    {
+        content: `
+            <h3>Client-Server communication simulation</h3>
+            <p>A university project simulating data packets being sent between a client and server computer. I received a grade of 94%.</p>
+            <img src="img_avatar.png" alt="Network Simulation">
+            <p>The simulation visualizes network layers, packet fragmentation, and error correction. It helped demonstrate how protocols like TCP and UDP work under the hood.</p>
+        `
+    },
+    {
+        content: `
+            <h3>Lottery web app</h3>
+            <p>A lottery web app focused on implementing cybersecurity techniques and encryption. I achieved 95% for this project.</p>
+            <img src="img_avatar.png" alt="Lottery App">
+            <p>The app uses password hashing (bcrypt), encryption for ticket data, and JWT tokens for session management. It's built with a Node.js backend and React frontend.</p>
+        `
+    },
+    {
+        content: `
+            <h3>Project 5</h3>
+            <p>Short description of the project.</p>
+            <img src="img_avatar.png" alt="Project 5 Image">
+        `
+    },
+    {
+        content: `
+            <h3>Project 6</h3>
+            <p>Short description of the project.</p>
+            <img src="img_avatar.png" alt="Project 6 Image">
+        `
+    }
+];
+
+
+// Hook up each card to show its content
+projectCards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+        modalBody.innerHTML = projectDetails[index].content;
+        modal.style.display = "block";
+        document.body.classList.add("modal-open"); // prevent background scroll
+    });
+});
+
+closeButton.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open"); // re-enable scroll
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open"); // re-enable scroll
+    }
+});
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+
+</script>
+
+
+
+</body>
+</html>
+
