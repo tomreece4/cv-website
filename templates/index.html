@@ -104,13 +104,13 @@
                     <img src="static/images/projects/DSA_project/bfs.png" alt="Project 2" style="width:100%">
                 </div>
                 <div class="card">
-                    <img src="img_avatar.png" alt="Project 3" style="width:100%">
                     <div class="container">
                         <h4><b>Financial News Sentiment Analysis Tool</b></h4>
                         <p>This tool was built to collect recent news articles online and assign them a sentiment
                         score, returning the most positive and negative articles, informing the user about news
                         judged most likely to affect stock prices.</p>
                     </div>
+                    <img src="static/images/projects/sentiment_analysis/positive_articles.png" alt="Project3" style = "width:100%">
                 </div>
                 <div class="card">
                     <img src="img_avatar.png" alt="Project 4" style="width:100%">
@@ -196,14 +196,23 @@ const projectDetails = [
         content: `
             <h3>Data Structures & Algorithms Simulator</h3>
             <p>This project was developed in my own time, as I looked to improve my programming skills when working
-            with various data structures and algorithms. The program visualises each node/value, and simulates
-            the process of working through to sort/search the values.</p>
+            with various data structures and algorithms. The program visualises a wide variety of searching, sorting
+            and traversal algorithms, allowing the user to customise the size of the dataset and speed of the algorithms.</p>
             <ul>
-                <li>Current values being checked are coloured red</li>
-                <li>All other values are coloured blue</li>
-                <li>Once completed, the entire sorted/searched set is displayed in green</li>
+                <li>Sorting algorithms: Selection Sort, Insertion Sort, Bubble Sort, Quick Sort, Merge Sort </li>
+                <li>Searching algorithms: Binary Search, Linear Search</li>
+                <li>Traversal algorithms: Depth-first Search, Breadth-first Search</li>
             </ul>
-            <p>The user can choose sorting, searching, or traversal algorithms, and adjust parameters and speed of animation via the GUI.</p>
+            <img src="/static/images/projects/DSA_project/DSA_GUI.png" alt="GUI">
+            <p>A basic TKinter Python interface is provided to allow users to select their desired algorithm and parameters, and then
+            in a few simple clicks, they can watch the algorithm in action! All algorithms are built by me based on
+            the skills I've learnt when practicing Leetcode and other problems, and each is displayed using
+            Matplotlib, a graph plotting library built for Python.</p>
+            <p><a href="https://github.com/tomreece4/dsa-visualisations">The full project can be found here.</a></p>
+            <p>Here are some examples of the Bubble Sort and the Binary Search!</p>
+            <img src="/static/images/projects/DSA_project/bubble_sort.gif" alt="Binary Search Gif">
+            <img src="/static/images/projects/DSA_project/binary_search.gif" alt="Binary Search Gif">
+
         `
     },
     {
