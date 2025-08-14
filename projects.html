@@ -20,71 +20,137 @@
       <button class="nav-toggle" id="navToggle" aria-label="Open navigation">&#9776;</button>
     </div>
   </header>
-  <main class="page-content">
-<section class="page-hero">
-  <h1>Projects</h1>
-  <p>A selection of things I've built.</p>
-</section>
 
-<section id="projects" class="section">
-  <div class="projects-grid">
-    <div class="card">
-      <div class="container">
-        <h4><b>Machine Learning – Simulating Evolutionary Techniques to Create Images</b></h4>
+  <main class="page-content">
+    <section class="page-hero">
+      <h1>Projects</h1>
+      <p>A selection of things I've built.</p>
+    </section>
+
+    <div class="projects-grid">
+      <div class="project-card" onclick="openModal('ml-evolution')">
+        <i data-lucide="brain"></i>
+        <h3>Machine Learning – Simulating Evolutionary Techniques to Create Images</h3>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Machine Learning</span>
+        </div>
         <p>Simulations of evolutionary techniques (e.g., mutation) to recreate artwork using limited shapes.</p>
       </div>
-      <img src="static/images/projects/evo_project/side_by_sides.png" alt="Evolutionary Techniques Project">
-    </div>
-    <div class="card">
-      <div class="container">
-        <h4><b>Data Structures & Algorithms Simulator</b></h4>
+
+      <div class="project-card" onclick="openModal('dsa-simulator')">
+        <i data-lucide="git-branch"></i>
+        <h3>Data Structures & Algorithms Simulator</h3>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Tkinter</span>
+        </div>
         <p>GUI that visualises search/sort/traversal algorithms step-by-step.</p>
       </div>
-      <img src="static/images/projects/DSA_project/bfs.png" alt="DSA Project">
-    </div>
-    <div class="card">
-      <div class="container">
-        <h4><b>Financial News Sentiment Analysis Tool</b></h4>
+
+      <div class="project-card" onclick="openModal('news-sentiment')">
+        <i data-lucide="bar-chart-2"></i>
+        <h3>Financial News Sentiment Analysis Tool</h3>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">NLP</span>
+        </div>
         <p>Collects recent articles and scores sentiment to surface likely market-moving news.</p>
       </div>
-      <img src="static/images/projects/sentiment_analysis/positive_articles.png" alt="Sentiment Analysis Project">
-    </div>
-    <div class="card">
-      <img src="static/images/projects/placeholder4.png" alt="HTCondor Job Interface">
-      <div class="container">
-        <h4><b>HTCondor Job Interface</b></h4>
+
+      <div class="project-card" onclick="openModal('htcondor')">
+        <i data-lucide="server"></i>
+        <h3>HTCondor Job Interface</h3>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Cluster Computing</span>
+        </div>
         <p>GUI for submitting deep learning jobs to a computing cluster built for Newcastle University.</p>
       </div>
-    </div>
-    <div class="card">
-      <img src="static/images/projects/placeholder5.png" alt="FPL Team Selector">
-      <div class="container">
-        <h4><b>FPL Team Selector</b></h4>
+
+      <div class="project-card" onclick="openModal('fpl')">
+        <i data-lucide="users"></i>
+        <h3>FPL Team Selector</h3>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">API</span>
+        </div>
         <p>Uses the Fantasy Premier League API and heuristics to select an optimised team.</p>
       </div>
-    </div>
-    <div class="card">
-      <img src="static/images/projects/placeholder6.png" alt="Tax Calculator">
-      <div class="container">
-        <h4><b>Tax Calculator</b></h4>
+
+      <div class="project-card" onclick="openModal('tax-calculator')">
+        <i data-lucide="file-text"></i>
+        <h3>Tax Calculator</h3>
+        <div class="badges">
+          <span class="badge">JavaScript</span>
+          <span class="badge">PDF Export</span>
+        </div>
         <p>Web tool that breaks down UK taxes and take-home pay and exports a PDF report.</p>
       </div>
     </div>
+  </main>
+
+
+  <div id="ml-evolution" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('ml-evolution')">&times;</span>
+      <h2>Machine Learning – Simulating Evolutionary Techniques to Create Images</h2>
+      <p>Placeholder</p>
+    </div>
   </div>
 
-  <div id="projectModal" class="modal">
-    <div class="modal-content scrollable-modal">
-      <span class="close" aria-label="Close modal">&times;</span>
-      <div id="modal-body"></div>
+  <div id="dsa-simulator" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('dsa-simulator')">&times;</span>
+      <h2>Data Structures & Algorithms Simulator</h2>
+      <p>Placeholder</p>
     </div>
   </div>
-</section>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>&copy; <span id="year"></span> Thomas Reece • <a href="mailto:thomas.reece4@outlook.com">Email</a> • <a href="https://www.linkedin.com/in/tom-reece-050ab21b3/">LinkedIn</a> • <a href="https://github.com/tomreece4">GitHub</a></p>
+
+  <div id="news-sentiment" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('news-sentiment')">&times;</span>
+      <h2>Financial News Sentiment Analysis Tool</h2>
+      <p>Placeholder</p>
     </div>
-  </footer>
-  <script src="static/js/main.js"></script>
+  </div>
+
+  <div id="htcondor" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('htcondor')">&times;</span>
+      <h2>HTCondor Job Interface</h2>
+      <p>Placeholder</p>
+    </div>
+  </div>
+
+  <div id="fpl" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('fpl')">&times;</span>
+      <h2>FPL Team Selector</h2>
+      <p>Placeholder</p>
+    </div>
+  </div>
+
+  <div id="tax-calculator" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('tax-calculator')">&times;</span>
+      <h2>Tax Calculator</h2>
+      <p>Placeholder</p>
+    </div>
+  </div>
+
+  <!-- Load Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+  </script>
 </body>
 </html>
