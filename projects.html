@@ -94,7 +94,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('ml-evolution')">&times;</span>
       <h2>Machine Learning – Simulating Evolutionary Techniques to Create Images</h2>
-      <p>Placeholder</p>
+      <p></p>
     </div>
   </div>
 
@@ -132,24 +132,25 @@
 
   <div id="tax-calculator" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('tax-calculator')">&times;</span>
-      <h2>Tax Calculator</h2>
-      <p>Placeholder</p>
+        <span class="close" onclick="closeModal('tax-calculator')">&times;</span>
+        <h2>Tax Calculator</h2>
+        <p>Placeholder</p>
     </div>
   </div>
 
-  <!-- Load Lucide icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
 
-    function openModal(id) {
-      document.getElementById(id).classList.add('active');
-    }
+  function openModal(id) {
+    document.getElementById(id).classList.add('active');
+    document.body.classList.add('modal-open'); // lock background scroll
+  }
 
-    function closeModal(id) {
-      document.getElementById(id).classList.remove('active');
-    }
-  </script>
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('active');
+    document.body.classList.remove('modal-open'); // unlock background scroll
+  }
+</script>
 </body>
 </html>
