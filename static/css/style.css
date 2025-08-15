@@ -106,7 +106,7 @@ a:hover { color: #fde047; }
 
 .btn{ padding: .8rem 1.2rem; border-radius: .8rem; border:1px solid var(--yellow); font-weight:600; }
 .btn-primary{ background: var(--yellow); color: #111; }
-.btn-primary:hover{ background: #fde047; transform: translateY(-1px); }
+.btn-primary:hover{ background: #000000; transform: translateY(-1px); }
 .btn-outline{ background: transparent; color: var(--yellow); }
 .btn-outline:hover{ background: rgba(250,204,21,.08); transform: translateY(-1px); }
 
