@@ -216,24 +216,22 @@ a:hover { color: #fde047; }
   display: flex;
 }
 
-/* Scrollable modal box */
 .modal-content {
-  position: relative;
-  background: var(--bg-elev, #1a1a1a);
-  color: var(--text, #fff);
-  padding: 1.25rem 1.25rem 2rem;
-  border: 1px solid var(--line, #333);
-  border-radius: 1rem;
-  box-shadow: 0 40px 70px var(--shadow, rgba(0,0,0,0.4));
-  max-width: min(900px, 92vw);
   max-height: 90vh;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: hidden; /* prevent sideways scrolling */
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
+.modal-content img {
+  display: block;
+  max-width: 100% !important; /* force image to stay within modal */
+  height: auto;
+  object-fit: contain;
 }
+
+
 
 /* Close button stays visible while scrolling */
 .close {
@@ -253,12 +251,15 @@ a:hover { color: #fde047; }
 }
 
 #modal-body img {
-  max-width: 100%;
-  border-radius: .6rem;
+  max-width: 100%;       /* never exceed modal's width */
+  height: auto;          /* maintain aspect ratio */
+  display: block;        /* remove inline gaps */
+  border-radius: 0.6rem;
   border: 1px solid var(--line, #333);
-  display: block;
   margin: 1rem 0;
+  object-fit: contain;   /* make sure the whole image is visible */
 }
+
 
 #modal-body h3 {
   margin-top: 0;
