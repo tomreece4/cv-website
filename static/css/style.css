@@ -200,12 +200,12 @@ a:hover { color: #fde047; }
 }
 
 
-/* Modal overlay */
+
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.95);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -217,17 +217,19 @@ a:hover { color: #fde047; }
 }
 
 .modal-content {
-  max-height: 90vh;
+  padding: 5%;
+  max-height: 100vh;
   overflow-y: auto;
-  overflow-x: hidden; /* prevent sideways scrolling */
+  overflow-x: hidden;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
 .modal-content img {
+  margin: auto;
+  width: 40%;
   display: block;
-  max-width: 100% !important; /* force image to stay within modal */
-  height: auto;
+  max-width: 100% !important;
   object-fit: contain;
 }
 
@@ -241,7 +243,6 @@ a:hover { color: #fde047; }
   font-size: 2rem;
   color: var(--yellow, #facc15);
   cursor: pointer;
-  background: var(--bg-elev, #1a1a1a);
   padding-left: 0.5rem;
 }
 
