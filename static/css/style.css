@@ -139,8 +139,7 @@ a:hover { color: #fde047; }
 }
 
 .projects-intro {
-  color: #ccc;
-  margin-bottom: 2rem;
+  color: #ccc;  margin-bottom: 2rem;
 }
 
 .projects-grid {
@@ -321,4 +320,5 @@ body.modal-open {
     max-width: 90%;
   }
 }
+
 
